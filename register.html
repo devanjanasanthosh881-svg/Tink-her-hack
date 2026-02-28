@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - SkillSwap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>SkillSwap</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="explore.html">Explore</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Register</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="city" placeholder="City">
+        <input type="text" id="teach" placeholder="Skills You Can Teach (comma separated)">
+        <input type="text" id="learn" placeholder="Skills You Want to Learn (comma separated)">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button onclick="addUser()">Submit</button>
+
+        <p id="success"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

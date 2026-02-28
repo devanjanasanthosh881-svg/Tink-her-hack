@@ -1,0 +1,444 @@
+/* ================================================= */
+/* ================= GLOBAL STYLES ================= */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #1f2937);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: #f8fafc;
+}
+
+/* ================================================= */
+/* ================= NAVBAR ======================== */
+/* ================================================= */
+
+nav {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav a {
+    color: #f1f5f9;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    bottom: -6px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================================================= */
+/* ================= CONTAINER ===================== */
+/* ================================================= */
+
+.container {
+    padding: 140px 10% 60px 10%;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ================================================= */
+/* ================= HEADINGS ====================== */
+/* ================================================= */
+
+.container h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================================================= */
+/* ================= BUTTONS ======================= */
+/* ================================================= */
+
+button {
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99,102,241,0.4);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* ================================================= */
+/* ================= INPUTS ======================== */
+/* ================================================= */
+
+input {
+    padding: 12px 15px;
+    margin: 10px 8px 10px 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.06);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99,102,241,0.5);
+}
+
+/* ================================================= */
+/* ================= HOME PAGE ===================== */
+/* ================================================= */
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* ================================================= */
+/* ================= REGISTER PAGE ================= */
+/* ================================================= */
+
+/* ===== REGISTER PAGE IMPROVEMENTS ===== */
+
+/* Center the register form */
+.container {
+    min-height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glass Form Card Effect */
+.container h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Wrap inputs visually using spacing */
+.container input,
+.container button {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Input Styling */
+input {
+    padding: 14px 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.06);
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+/* Input focus animation */
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99,102,241,0.5);
+    transform: scale(1.02);
+}
+
+/* Submit Button Upgrade */
+button {
+    margin-top: 20px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(99,102,241,0.4);
+}
+
+/* Success Message Animation */
+#success {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #10b981;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Smooth form fade-in */
+.container {
+    animation: slideUp 0.8s ease;
+}
+
+/* ================================================= */
+/* ================= EXPLORE PAGE ================== */
+/* ================================================= */
+
+#userList {
+    margin-top: 40px;
+}
+
+.user-card {
+    background: rgba(255,255,255,0.06);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.35s ease;
+    animation: fadeInCard 0.6s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.35);
+}
+
+.match {
+    border-left: 6px solid #10b981;
+    background: rgba(16,185,129,0.08);
+}
+
+.user-card button {
+    margin: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.user-card button[style*="red"] {
+    background: linear-gradient(135deg, #e0c5c5, #ddc2c2);
+}
+
+.user-card button[style*="red"]:hover {
+    box-shadow: 0 8px 18px rgba(239,68,68,0.4);
+}
+
+.user-card p[style*="color:red"] {
+    animation: pulseWarning 1.2s infinite;
+}
+
+/* ================================================= */
+/* ================= ANIMATIONS ==================== */
+/* ================================================= */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseWarning {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 120px 6% 40px 6%;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+
+
+/* Improve spacing only when userList exists */
+#userList {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Make search area look premium */
+#searchSkill,
+#searchCity {
+    min-width: 250px;
+}
+
+/* Wrap search inputs nicely */
+#searchSkill,
+#searchCity,
+.container > button {
+    margin-bottom: 15px;
+}
+
+/* User Card Redesign (More Premium) */
+.user-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    border-radius: 16px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft glowing border on hover */
+.user-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+    border: 1px solid rgba(99,102,241,0.5);
+}
+
+/* Subtle animated shine effect */
+.user-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.user-card:hover::before {
+    left: 100%;
+}
+
+/* Match Highlight — More Premium */
+.match {
+    border-left: 6px solid #10b981;
+    background: linear-gradient(
+        145deg,
+        rgba(16,185,129,0.15),
+        rgba(16,185,129,0.05)
+    );
+}
+
+/* Improve Rating Section */
+.user-card p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Rating Buttons — More Elegant */
+.user-card button {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-card button:hover {
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+}
+
+/* Report Button Styling */
+.user-card button[style*="white"] {
+    background: linear-gradient(135deg, #c2c4ed, #a797dd);
+    border: none;
+}
+
+/* Warning Text Animation */
+.user-card p[style*="color:white"] {
+    font-weight: bold;
+    animation: pulseWarning 1.4s infinite;
+}
+
+/* Search Buttons Better Spacing */
+.container > button {
+    margin-right: 10px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    #userList {
+        grid-template-columns: 1fr;
+    }
+}

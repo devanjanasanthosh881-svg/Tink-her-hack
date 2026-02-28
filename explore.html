@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explore - SkillSwap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="displayUsers()">
+
+    <nav>
+        <h1>SkillSwap</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="explore.html">Explore</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Find Skill Matches</h2>
+
+        <input type="text" id="searchSkill" placeholder="Search by Skill (e.g. Python)">
+        <input type="text" id="searchCity" placeholder="Filter by City (e.g. Kochi)">
+        <button onclick="applyFilters()">Search</button>
+        <button onclick="displayUsers()">Reset</button>
+
+        <div id="userList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
